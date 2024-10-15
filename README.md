@@ -28,8 +28,8 @@ Moreno and her team are interested in analyzing the historical bike trip data of
 
 ## Tools
 
-PostgreSQL, PG Admin for data analysis; Tableau for data visualisations
-Data is stored locally (mac)
+PostgreSQL, PG Admin for data analysis; Tableau for data visualisations.
+Data is stored locally (mac) to avoid paid-subscribtion enforced limitations. Also, to further explore Postgre syntax.
 
 
 ## Contributing
