@@ -26,6 +26,12 @@ She notes that casual riders are already aware of the Cyclistic program and have
 
 Moreno and her team are interested in analyzing the historical bike trip data of Cyclistic to identify trends.
 
+## Tools
+
+PostgreSQL, PG Admin for data analysis; Tableau for data visualisations
+Data is stored locally (mac)
+
+
 ## Contributing
 Contributions to this project are welcome. Please fork the repository and submit a pull request with your improvements or suggestions.
 
