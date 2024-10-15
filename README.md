@@ -30,4 +30,5 @@ Moreno and her team are interested in analyzing the historical bike trip data of
 Contributions to this project are welcome. Please fork the repository and submit a pull request with your improvements or suggestions.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [Data_license.pdf](https://github.com/user-attachments/files/17384961/Data_license.pdf)
+file for details.
