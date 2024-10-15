@@ -1,4 +1,4 @@
-#  The conclusion
+#  Analysis
 
 Analyzing membership trends reveals distinct patterns between casual users and members regarding usage.
 
