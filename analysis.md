@@ -4,7 +4,7 @@ Analyzing membership trends reveals distinct patterns between casual users and m
 
 ## Issues
 
-While working on visualisations, discovered some anomality - May was returning only 121 rides in total, while other months - 100k rides. Checked NULL values in May  (original data source) and discovered May was had a lot of NULL values in end_station name. Therefore, majority of data was removed with the NULL drop. Decided to drop May altogether.
+While working on visualisations, discovered some anomality - May was returning only 121 rides in total, while other months - 100k rides. Checked NULL values in May  (original data source) and discovered that a lot of NULL values occured in May (star_station_name, end_station name). Therefore, majority of data was removed during data cleaning. Decided to drop May altogether.
 
 ```sql
 DELETE FROM  filtered_data
