@@ -44,7 +44,8 @@ Casual users consistently have longer average trip durations compared to members
 
 The data indicates that summer is the most active season for rides, with July being the peak month. Casual users are more seasonal in their usage, heavily favoring the summer months, while members maintain more steady activity across the year.
 
-# Suggestions to convert casuals to members
+# Strategies for Converting Casual Riders to Annual Memberships
+
 
 
 ## 1. Offer Seasonal Membership Discounts for Casual Users
