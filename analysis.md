@@ -4,17 +4,44 @@ Analyzing membership trends reveals distinct patterns between casual users and m
 
 ## How many members vs casuals: 
 
+ ```sql
+SELECT  member_casual, COUNT(member_casual) from filtered_data
+GROUP BY(member_casual)
+```
+
 <img width="308" alt="member_casual" src="https://github.com/user-attachments/assets/25dde7ca-908a-401a-9bb0-57ab3cd388c6">
 
 ## Top 10 start_stations for both:
+
+```sql
+SELECT  COUNT (member_casual) As casual_count, start_station_name from filtered_data
+WHERE member_casual = 'casual'
+GROUP BY(member_casual, start_station_name)
+ORDER BY COUNT(member_casual) DESC
+LIMIT 10
+```
 
 <img width="398" alt="most_popular_start_stations" src="https://github.com/user-attachments/assets/677f6c72-1296-4278-b229-ec8831d1763d">
 
 ## Top 10 end_stations for both:
 
+```sql
+SELECT  COUNT (member_casual) As casual_count, end_station_name from filtered_data
+WHERE member_casual = 'casual'
+GROUP BY(member_casual, end_station_name)
+ORDER BY COUNT(member_casual) DESC
+LIMIT 10
+```
+
 <img width="393" alt="top_10_end_stations" src="https://github.com/user-attachments/assets/cff442e0-149b-4932-ac53-eaf073572c68">
 
 ## Top choice per bike type:
+
+```sql
+SELECT COUNT (rideable_type) AS count, rideable_type, member_casual FROM filtered_data
+GROUP BY (rideable_type, member_casual)
+ORDER BY count DESC
+```
 
 <img width="443" alt="rideable_type" src="https://github.com/user-attachments/assets/cb544418-fb87-4e76-a574-928e6c22b53f">
 
@@ -22,11 +49,23 @@ The high usage of electric bikes among both member and casual users suggests a p
 
 ## Riding tendencies by DOW:
 
+```sql
+SELECT COUNT(day_of_week) as ride_count, day_of_week, member_casual from filtered_data
+GROUP BY (day_of_week, member_casual)
+ORDER by ride_count DESC
+```
+
 ![DOW_trend](https://github.com/user-attachments/assets/0535fa23-7751-4ee8-bec0-fe026a270dca)
 
 Member usage aligns with a weekday commuting pattern, while casual users are more active on weekends, likely for leisure purposes.
 
 ## AVG trip length:
+
+```sql
+SELECT AVG (trip_length_m) avg_length, member_casual FROM filtered_data
+GROUP BY (member_casual)
+ORDER BY (avg_length) DESC
+```
 
 <img width="383" alt="AVG_ride_length" src="https://github.com/user-attachments/assets/2d26febf-203e-436c-8ecd-3c3fb37e8284">
 
@@ -34,11 +73,23 @@ Casuals take double the longer trips, meaning weekend leisure trips vs members -
 
 ## AVG trip length per month:
 
+```sql
+SELECT AVG (trip_length_m) avg_length, month, member_casual FROM filtered_data
+GROUP BY (member_casual, filtered_data.month)
+ORDER BY (month) DESC
+```
+
 ![AVG_trip_l_mon](https://github.com/user-attachments/assets/64f648c2-1e2d-4346-be43-6613da4d63ba)
 
 Casual users consistently have longer average trip durations compared to members, with the highest trip length seen during the summer months (June, July, and August). This aligns with expected patterns where warm-weather months see more recreational use, particularly from casual riders.
 
 ## Most active month:
+
+```sql
+SELECT COUNT(ride_id) rides, month, member_casual FROM filtered_data
+GROUP BY (month, member_casual)
+ORDER BY (rides) DESC
+```
 
 ![month_activity](https://github.com/user-attachments/assets/33836ca4-23e9-4ec3-97c5-b4f5bd5d8978)
 
