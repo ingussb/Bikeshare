@@ -2,6 +2,16 @@
 
 Analyzing membership trends reveals distinct patterns between casual users and members regarding usage.
 
+## Issues
+
+While working on visualisations, discovered some anomality - May was returning only 121 rides in total, while over months we are looking at 100k rides. Checked NULL values in May  (original data source) and discovered May was had a lot of NULL values in end_station name. Therefore, majority of data was removed with the NULL drop. Decided to drop May altogether.
+
+```sql
+DELETE FROM  filtered_data
+WHERE MONTH = 'MAY'
+```
+
+
 ## How many members vs casuals: 
 
  ```sql
@@ -84,6 +94,8 @@ ORDER BY (month) DESC
 Casual users consistently have longer average trip durations compared to members, with the highest trip length seen during the summer months (June, July, and August). This aligns with expected patterns where warm-weather months see more recreational use, particularly from casual riders.
 
 ## Most active month:
+
+
 
 ```sql
 SELECT COUNT(ride_id) rides, month, member_casual FROM filtered_data
