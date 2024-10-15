@@ -65,7 +65,7 @@ SELECT COUNT(ride_id) rides, month, member_casual FROM filtered_data
 GROUP BY (month, member_casual)
 ORDER BY (rides) DESC
 
---Discovered an issue - majority of NULLS occurred during May 2023 data collection, therefore after the NULL drop, May returns only 121 ride. Dropping May completely.
+--Discovered an issue - majority of NULLS occurred during May 2023 therefore after the NULL drop, May returns only 121 ride. Dropping May completely.
 
 DELETE FROM  filtered_data
 WHERE MONTH = 'MAY'
