@@ -119,5 +119,6 @@ Casual users tend to take longer trips on weekends, likely for leisure. Creating
 ## 3. Promote Exclusive Electric Bike Perks for Members
 Given the high usage of electric bikes among casual users, promoting member-only perks such as discounted rates or priority access to electric bikes can be a strong incentive. Casual riders who prefer electric bikes may find the added convenience and reduced cost of electric bike usage compelling. Ride-sharing services could emphasize these exclusive benefits through targeted marketing campaigns, particularly at the start of the summer season when casual users are more engaged with the service.
 
+Additionally, leveraging insights from the most popular start and end station names can further enhance these campaigns. By identifying top stations where casual users typically begin and end their rides, the service can focus promotional efforts in these high-traffic areas. This targeted approach could include on-site signage, digital ads, or push notifications, encouraging casual riders to consider membership perks while they’re at stations they frequently use. This station-specific marketing can optimize visibility and relevance, making the membership benefits more appealing to casual users.
 
 
