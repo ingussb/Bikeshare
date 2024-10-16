@@ -21,29 +21,30 @@ GROUP BY(member_casual)
 
 <img width="308" alt="member_casual" src="https://github.com/user-attachments/assets/25dde7ca-908a-401a-9bb0-57ab3cd388c6">
 
-## Top 10 start_stations for both:
+## Top 10 start_stations for casual users:
 
 ```sql
-SELECT  COUNT (member_casual) As casual_count, start_station_name from filtered_data
+SELECT  COUNT (member_casual), start_station_name from filtered_data
 WHERE member_casual = 'casual'
-GROUP BY(member_casual, start_station_name)
+GROUP BY(start_station_name)
 ORDER BY COUNT(member_casual) DESC
 LIMIT 10
 ```
 
-<img width="398" alt="most_popular_start_stations" src="https://github.com/user-attachments/assets/677f6c72-1296-4278-b229-ec8831d1763d">
+<img width="334" alt="Screenshot 2024-10-16 at 21 28 38" src="https://github.com/user-attachments/assets/78b2cd77-969a-44fb-982c-f7348c1fa80b">
 
-## Top 10 end_stations for both:
+
+## Top 10 end_stations for casual users:
 
 ```sql
-SELECT  COUNT (member_casual) As casual_count, end_station_name from filtered_data
+SELECT  COUNT (member_casual), end_station_name from filtered_data
 WHERE member_casual = 'casual'
-GROUP BY(member_casual, end_station_name)
+GROUP BY(end_station_name)
 ORDER BY COUNT(member_casual) DESC
 LIMIT 10
 ```
 
-<img width="393" alt="top_10_end_stations" src="https://github.com/user-attachments/assets/cff442e0-149b-4932-ac53-eaf073572c68">
+<img width="335" alt="Screenshot 2024-10-16 at 21 30 06" src="https://github.com/user-attachments/assets/ee8d6416-260b-449b-8036-8edd9c16e60b">
 
 ## Top choice per bike type:
 
