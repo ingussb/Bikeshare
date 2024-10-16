@@ -4,7 +4,7 @@ Analyzing membership trends reveals distinct patterns between casual users and m
 
 ## Issues
 
-While working on visualisations, discovered some anomality - May was returning only 121 rides in total, while other months - 100k rides. Checked NULL values in May  (original data source) and discovered that a lot of NULL values occured in May (star_station_name, end_station name). Therefore, majority of data was removed during data cleaning. Decided to drop May altogether.
+During the analysis of visualizations, I identified an outlier: the month of May showed a total of only 121 rides, compared to approximately 100,000 rides in other months. Upon investigation, I found a significant number of NULL values in the original data source for May, particularly in the start_station_name and end_station_name fields. As a result, most of May's data was excluded during the data cleaning process. Therefore, I made the decision to remove May from the dataset entirely.
 
 ```sql
 DELETE FROM  filtered_data
