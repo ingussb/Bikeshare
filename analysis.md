@@ -4,7 +4,7 @@ Analyzing membership trends reveals distinct patterns between casual users and m
 
 ## Issues
 
-During the analysis of visualizations, I identified an outlier: the month of May showed a total of only 121 rides, compared to approximately 100,000 rides in other months. Upon investigation, I found a significant number of NULL values in the original data source for May, particularly in the start_station_name and end_station_name fields. As a result, most of May's data was excluded during the data cleaning process. Therefore, I made the decision to remove May from the dataset entirely.
+Identified an outlier: the month of May showed a total of only 121 rides, compared to approximately 100,000 rides in other months. Upon investigation, I found a significant number of NULL values in the original data source for May, particularly in the start_station_name and end_station_name fields. As a result, most of May's data was excluded during the data cleaning process. Therefore, I made the decision to remove May from the dataset entirely.
 
 ```sql
 DELETE FROM  filtered_data
